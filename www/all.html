@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <title></title> -->
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<xmp theme="../../../../tjr" style="display:none;">
+
+# Feedback machine
+
+     _ _ _     _                      _          _   _
+    | | | |___| |___ ___ _____ ___   | |_ ___   | |_| |_ ___
+    | | | | -_| |  _| . |     | -_|  |  _| . |  |  _|   | -_|
+    |_____|___|_|___|___|_|_|_|___|  |_| |___|  |_| |_|_|___|
+
+
+
+
+
+
+
+
+     _____ _____ _____ ____  _____ _____ _____ _____
+    |   __|   __|   __|    \| __  |  _  |     |  |  |
+    |   __|   __|   __|  |  | __ -|     |   --|    -|
+    |__|  |_____|_____|____/|_____|__|__|_____|__|__|
+
+
+                                   _____ _____ _____ _____ _____ _____ _____
+                                  |     |  _  |     |  |  |     |   | |   __|
+                                  | | | |     |   --|     |-   -| | | |   __|
+                                  |_|_|_|__|__|_____|__|__|_____|_|___|_____|
+
+The feedback machine is one way we give feedback during the labs
+(alternatively, just ask a TA to give you help). Please make sure to do
+the lab in week 1, which will get you familiar with its use.
+
+The feedback machine uses bash scripts, so unfortunately will likely not
+work on Windows. There is a chance it will work on Mac. Ideally,
+students should use the computers in the lab.
+
+# IDE and editor: Dr Java 
+
+There are many IDEs and text editors around. I have asked for Dr Java to
+be installed. You should be able to run it by typing `drjava` on the
+console. This allows you to edit, save, compile, etc. It also allows you
+to interactively investigate code through the REPL (interactive Java
+console).
+
+The Dr Java homepage is <http://www.drjava.org/>
+# Prerequisites
+
+What do you need to take this course? Essentially the requirements are
+very little.
+
+
+* You need to be comfortable using a computer; particularly you need
+  to understand the concepts of **files** and **directories**.
+* You also need to have a basic familiarity with the Linux **command
+  line** (sometimes called the "shell" or "bash"), particularly the
+  commands `cd, ls, mkdir, pwd, rm, touch, java, javac` and the syntax
+  `.` and `..` for current and parent directory.
+ * Information about the `java` and `javac` commands can be found
+   in the additional material for week 1. A video is
+   [here](https://www.youtube.com/watch?v=0kgVq65NRKQ). Please also
+   see the week 1 additional material (particularly the Oracle
+   getting started tutorials).
+ * A video discussing the basics is
+   [here](https://www.youtube.com/watch?v=jDINUSK7rXE) (for the
+   Mac, but Linux is essentially the same)
+ * Another is [here](https://www.youtube.com/watch?v=x73WTEltyHU)
+   (you won’t be able to use `sudo`)
+ * A more detailed set of videos is by someone called Steven
+   Gordon, starting
+   [here](https://www.youtube.com/watch?v=sHGoJsAEpsM).
+ * And there are many many more. Find one that works for you. There
+   are also books of course, many available in the library.
+   <http://shop.oreilly.com/product/9780596009656.do> is probably
+   OK (I haven’t read it myself).
+* You need to be able to use a text editor to create `.java` source
+  files, and save them in different directories.
+* You need to be able to compile the `.java` files on the command line
+  using `javac`.
+* You need to be able to run the resulting `.class` files using `java`
+* You need to have a working knowledge of basic Java syntax, such as
+  is taught in CO1003.
+
+
+From past experience, about 50% of the students will not have these
+prerequisites. If you are one of these students, you need to get these
+skills as soon as possible.
+
+
+<i class="material-icons">warning</i> WARNING: In the labs this week I
+will do random checks on individual students (so, you need to attend
+the labs and be prepared to show me you can do
+the above).
+# Java tutorials 
+
+You need to know the basics of Java before taking this course. Some
+resources are:
+
+* [Java tutorials at Oracle (see especially the 'getting started' trail)](http://docs.oracle.com/javase/tutorial/index.html)
+* [Introduction to Programming Using Java](http://math.hws.edu/javanotes/index.html) A nice introduction
+* [Introduction to Programming in Java](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-092-introduction-to-programming-in-java-january-iap-2010/lecture-notes/)   Basic course from MIT
+* [Intro by Bradley Kjell](http://chortle.ccsu.edu/cs151/cs151java.html) Lots of exercises
+* [Cafe au lait](http://www.cafeaulait.org/course/) Comprehensive on the basics (e.g. jar files)
+* [Princeton Java intro](http://introcs.cs.princeton.edu/java/home/) Good
+# Week 1 additional material
+
+* IDEs, particularly Dr Java, [here](a_ide.html)
+
+* Java tutorials [here](a_tutorials.html)
+
+* Other slides [Wu Ch. 9 (part) slides on
+  strings](../resources/www/wu_slides/5th_Ed_Ch09.ppt)
+
+* Reference documentation:
+ * [Java API reference (see especially the String class)](http://docs.oracle.com/javase/8/docs/api/)
+ * [java man page](http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/java.html)
+ * [javac man page](http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javac.html)
+
+* Book libraries
+ * [Computer Science at Uni Library](http://www2.le.ac.uk/library/find/subjects/computerscience)
+
+ * [Safari books online (access via Library website- why not request a title you want to read?)](http://proquest.safaribooksonline.com/)
+
+* Good books
+ * [Java precisely webpage (free book: the zero’th edition)](http://www.itu.dk/~sestoft/javaprecisely/)
+ * [Good basic Java programming book, online, with lots of exercises](http://introcs.cs.princeton.edu/java/home/)
+
+* Tutorials, see [here](a_tutorials.html)
+
+* [Basic Java string exercises](http://www.sable.mcgill.ca/~clump/comp202/midterm/basic-problems.html); also the tutorials have many exercises
+
+
+
+
+
+# CO1005 Data structures and development environments
+
+<i class="material-icons">warning</i> WARNING: The first lecture is on
+Thursday, at 09:00. Please consult the timetable for more
+information.
+
+
+## About this website
+
+This website has 2 main pages. This is the first page. The second page
+contains the weekly material. Of course, there are further pages linked to from these pages, but essentially these two are the ones you need to read fully.
+
+<center style='font-size:2em'>[Weekly material](weeks.html)</center>
+
+
+
+## Announcements and module dashboard
+
+Any timetable changes will be recorded here, and usually also emailed to all
+students.
+
+* The study guide is
+[here](../study_guide/study_guide.pdf).
+* <i class="material-icons">warning</i> 2018-01-16 there will be no sessions on Fri 26th Jan - the convenor is in London on University business
+* 2018-01-15 new webpage
+<!--
+ * Make sure you understand the [prerequisites](additional.html#_prerequisites) for this module.
+ * Please consult the [Timetable](timetable.html) and the
+   [Weekly material](weeks.html).
+   -->
+* **Panopto recordings** of sessions should be available
+  via blackboard (module CO1005). Please let me know if this doesn't
+  seem to work. Otherwise, we do not use Blackboard.
+
+
+## Feedback
+
+- Please post all queries to the module site on Piazza: 
+  https://piazza.com/university_of_leicester/spring2018/co1005
+  (the access code, which is case sensitive, is "co1005" )
+- Teaching assistants have been advised to give even more feedback
+  in labs!
+- We have introduced the "Feedback machine" to give further
+  automated feedback during labs.
+- Piazza has been introduced to coordinate and focus student
+  queries.
+- If you are unsure why your code is not correct, post (anonymously
+  if you like) something to Piazza and we will give feedback there
+  or in the surgery. Similarly, if you are in the surgery and don't
+  understand something, please ask!
+- We will stress to students that the following are the main forms
+  of feedback in this module: **feedback in surgeries** (lab solutions,
+  worked examples, student submissions examined); class test **marked
+  scripts**; class test **model answers** and **in-class explanations** with
+  **question and answer** session; **in-lab feedback from TAs** and convenor
+  and also automated **feedback from the Feedback machine**; feedback on
+  **Piazza**
+- The convenor will try very hard to encourage questions during the
+  lectures, to give feedback on what students find difficult.
+
+Essentially, we want to **ensure** that, if there is anything you
+**don't understand**, you get some form of **feedback** to help you.
+We believe that there are ample opportunities to get feedback. If you
+feel this is not true, we want to hear about it as soon as possible.
+
+
+## People
+
+<img src='torso.jpg' />
+
+
+The lecturers are:
+
+* *Convenor*: Tom Ridge <tr61@le.ac.uk> http://www.cs.le.ac.uk/~tr61
+* *New academic*: Yudong Zhang
+
+
+The TAs are:
+
+* Fola-Dami Eyitemi, PhD student, GTA, <fdje1@le.ac.uk>
+* Jakob Spooner, PhD student, GTA, <jts21@le.ac.uk>
+* Bbadraddin Alturki, PhD student, <baba1@le.ac.uk>
+* Thomas Varghese, MSc student, <tv45@le.ac.uk>
+* Anthony McQuilliam, MComp student, <am829@le.ac.uk> (Lab 1 only) 
+* Yassir Yahaya, MSc student, <yy200@le.ac.uk> (Lab 2 only). 
+
+
+The TAs have help desk sessions. The details are https://campus.cs.le.ac.uk/teaching/Resources.xml  (look on the right hand side! FIXME at the moment the schedule has not been drawn up.)
+
+Please use Piazza for all questions you have.
+
+* [a_feedback_machine.md](a_feedback_machine.html)
+* [a_ide.md](a_ide.html)
+* [a_prereqs.md](a_prereqs.html)
+* [a_tutorials.md](a_tutorials.html)
+* [a_week1.md](a_week1.html)
+* [index.md](index.html)
+* [toc.md](toc.html)
+* [weeks.md](weeks.html)
+# CO1005 weekly material
+
+
+<hr/>
+
+## Week 1
+
+
+### Slides, summaries and code
+
+* [Prerequisites](a_prereqs.html): What you need to
+  know before attending the course.
+* [Introduction slides](../slides/intro.pdf): Introduction to
+  the module.
+* [Strings slides](../slides/strings.pdf): String programming
+  (datastructures): strings; 4 or 5 essential string functions; how to
+  understand while loops; the basic algorithm - walking through a
+  string using a while loop; some simple functions on strings.
+* The raw .java file which you can download, compile and run:
+  [../java/string/String\_examples.java](../java/string/String_examples.java)
+* Youtube videos "Java, strings, …​"
+  [here](https://www.youtube.com/playlist?list=PLxKUsnr0vDOSDOuI67WqPbjCyI2aNwLHc).
+* Understand Java code by stepping through it using pythontutor (bad
+  name): <http://pythontutor.com/visualize.html#mode=edit> (you have
+  to choose Java as the language!)
+
+
+### Other
+
+* Labs, see [here](../labs/lab1/index.html)
+* Additional material, see [here](a_week1.html)
+* Screencasts: I have put quite a few screencasts and tutorials on youtube
+[here](https://www.youtube.com/playlist?list=PLxKUsnr0vDOSDOuI67WqPbjCyI2aNwLHc).
+
+
+
+<hr/>
+
+
+
+</xmp>
+<script src="strapdown/v/0.2/strapdown.js"></script>
+</html>
