@@ -1,0 +1,29 @@
+body { 
+    font-family: 'Roboto', sans-serif; 
+    padding-top:0;
+    padding-bottom:0;
+// set by .container   max-width:60em;
+}
+
+h1,h2,h3 { color:DodgerBlue }
+
+h1 { font-size:40pt; line-height:120%; }
+
+table {
+    border-collapse: collapse;
+}
+
+table,td,th {
+    border: 1px solid black;
+}
+
+li {
+    margin: 0.5ex 0;
+}
+
+.container {
+    max-width: 60em;
+    margin: 0 auto;
+    padding:1em;
+    background-color:Beige 
+}

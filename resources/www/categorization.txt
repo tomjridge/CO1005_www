@@ -1,0 +1,49 @@
+* CO1005 exam paper analysis
+
+Questions worth more than 5 marks have been given with their marks
+
+Java datastructures and programming
+  2010    2d (abstract classes and subclassing, 15 marks) 2e (interface, 6 marks) 3a 3b 3c (linked list, priority queue) 4e (exceptions, 20 marks)
+  2009 1e 2d (abstract classes and subclassing, 15 marks) 2e (interface, 6 marks) 3a 3b 3c (linked list, priority queue) 4e (exceptions, 20 marks)
+
+Collections.sort and compareTo
+  2010 3d (21 marks)
+  2009 3d (21 marks)
+
+exceptions
+  2010 1h 1i 4a 4b 4c 4d 4e (20 marks)
+  2009 1i 1j 4a 4b 4c 4d 4e (20 marks)
+
+Java features
+  2010    2a 2b 2c
+  2009 1b 2a 2b 2c 
+
+jar files and jar command
+  2010 1b
+  2009 1c
+
+testing
+  2010 1c
+
+IDEs
+  2009 1d
+
+linked lists
+  2010 1d
+
+simple recursion over a string
+  2010 1e
+  2009 1f
+
+bubblesort, quicksort
+  2010 1f (bubblesort)
+  2009 1g (quicksort)
+
+output of simple oo code
+  2010 1g
+  2009 1h
+
+Conclusion: focus on exceptions, abstract classes and subclassing,
+interfaces, (and Collections.sort and compareTo if you feel you can
+understand what is going on)
+
