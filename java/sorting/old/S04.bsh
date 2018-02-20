@@ -1,0 +1,65 @@
+// recap: insert and insertion_sort
+
+// to join strings s1 and s2 we write s1 + s2
+// so let's write append(l1,l2) informally as l1 ++ l2 
+
+
+List insert(int i, List l0) {
+	List l = l0;
+  List to_return = nil();
+
+  while(true) {
+xxx
+    if(l.isEmpty()) return append1(to_return,i);
+
+    if(i < (Integer)(hd(l))) // i < hd(l)
+			// want to return:  to_return ++ [i] ++ l
+      return append(to_return,cons(i,l));
+		else { // i >= hd(l) i.e. hd(l) <= i
+			to_return = append1(to_return,hd(l));
+			l = tl(l);
+		}
+  }
+
+}
+
+// side comment: (xs ++ ys) ++ zs == xs ++ (ys ++ zs)
+
+// key to understanding (this and all the other functions): what do
+// things look like in general, after we've gone round the while loop a
+// couple of times?
+
+
+
+// sorting a list of ints!
+List insertion_sort(List l) {
+	List to_return = nil();
+	while(true) {
+		if(l.isEmpty()) return to_return;
+		to_return = insert(hd(l),to_return);
+		l=tl(l);
+	}
+}
+
+
+
+
+
+
+
+
+
+// another way to sort things
+
+
+
+
+List mergesort(List l) {
+  if(length(l) == 0) return l; // already sorted
+  if(length(l) == 1) return l; // already sorted
+  List l1 = split1(l);
+  List l2 = split2(l);
+  l1 = mergesort(l1);
+  l2 = mergesort(l2);
+  return merge(l1,l2);
+}

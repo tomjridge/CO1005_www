@@ -1,0 +1,127 @@
+% S08
+% Tom Ridge
+
+Revision
+========
+
+Topics proposed:
+
+* Sorting - bubblesort
+
+* Trees x3 (see W05, CC05, WS4)
+
+* Implement stacks and queues
+
+* Packages (covered this a bit when doing compilation)
+
+* Past exam papers
+
+* Exception handling (in WS5)
+
+* More command line stuff (but this isn't really examinable)
+
+
+
+Bubblesort
+==========
+
+* Resources
+
+    + Module webpage, W04
+
+    + L04B diary
+
+    + Wikipedia
+    
+    + Wu slides on Sorting and searching (from webpage)
+    
+Bubblesort code
+===============
+
+    for(int j=0; j < a.length; j++) {
+      for(int i = 0; i < a.length -1; i++) {
+      	if(a[i] > a[i+1]) {
+      		// swap these entries
+      		int tmp = a[i];
+      		a[i] = a[i+1];
+      		a[i+1] = tmp;
+      	}
+      }
+    }
+
+* N.B. `j` does not appear after the first line (so what?)
+
+* N.B. the inner loop walks through the array, swapping adjacent
+  elements if they are no in the right order
+
+
+Bubblesort example
+==================
+
+    int[] a = { 3,1,10,11,9,4 };
+    
+Worst case example
+
+    int[] a = { 9,8,7,6,5,4 };
+
+Possible exam questions: show how bubblesort works on an array; other
+questions on bubblesort
+
+
+
+Trees
+=====
+
+* Resources
+
+    + Module webpage W05
+    
+    + CC05
+    
+    + WS4
+    
+
+MyNode class
+============
+
+    public class MyNode {
+    
+    	public MyNode left = null;
+    	public Object obj = null;	
+    	public MyNode right = null;
+    
+    	public MyNode(MyNode l, Object o, MyNode r) {
+    		left = l; obj = o; right = r;
+    	}
+    	
+    }
+
+Auxiliary functions
+
+    node(x,obj,y)  and leaf(obj)
+    
+    
+Functions on trees
+==================
+
+* We looked at some functions on trees, such as `count_leaves` and
+  `elements` (from WS4).
+  
+
+Packages
+========
+
+* We discussed packages again. 
+
+
+Implement stacks and queues
+===========================
+
+* We looked at the implementation of stacks and queues.
+
+
+
+Past exam papers
+================
+
+* We started going through the 2010 exam paper.

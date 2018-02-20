@@ -1,0 +1,31 @@
+
+List insert(int i, List l0) {
+	List l = l0;
+  List to_return = nil();
+
+  while(true) {
+xxx
+    if(l.isEmpty()) return append1(to_return,i);
+
+    if(i < (Integer)(hd(l))) // i < hd(l)
+			// want to return:  to_return ++ [i] ++ l
+      return append(to_return,cons(i,l));
+		else { // i >= hd(l) i.e. hd(l) <= i
+			to_return = append1(to_return,hd(l));
+			l = tl(l);
+		}
+  }
+
+}
+
+
+// sorting a list of ints!
+List insertion_sort(List l) {
+	List to_return = nil();
+	while(true) {
+		if(l.isEmpty()) return to_return;
+		to_return = insert(hd(l),to_return);
+		l=tl(l);
+	}
+}
+

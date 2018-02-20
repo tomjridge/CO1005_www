@@ -1,0 +1,50 @@
+
+// uses MyList
+
+// FIXME what does the standard Java list impl look like?
+
+class MyList {
+
+    public static final MyList empty = null;
+
+    public static boolean isEmpty(MyList l) { return (l==empty); }
+
+    int o; // int not object
+
+    MyList next;
+
+    MyList(int p, MyList n) {
+	o=p; next=n;
+    }
+
+    public static MyList cons(int p, MyList n) { 
+	return new MyList(p,n);
+    }
+
+    public String toString() { return "" + o + (next == null ? "" : ","+next.toString()); }
+
+}
+
+
+l = MyList.cons(1,
+      MyList.cons(2, 
+        MyList.cons(3,MyList.empty)));
+
+MyList insert(MyList l, int i) {
+    if(MyList.isEmpty(l)) { return MyList.cons(i, MyList.empty); }
+    orig = l;
+    c = l; n = l.next;
+    // we want to find a place where c.o <= i, i < n.o
+    while(true) {
+	if(n.isEmpty()) { c.next = MyList.cons(i,MyList.empty); return orig; }
+	if(c.o <= i && i < n.o) { c.next = MyList.cons(i,n); return orig; }
+	c=n; n=n.next;
+    }
+}
+
+l = MyList.cons(1,
+      MyList.cons(2, 
+        MyList.cons(4,MyList.empty)));
+
+insert(l,4);
+
