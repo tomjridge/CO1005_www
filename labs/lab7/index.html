@@ -452,12 +452,13 @@ code. Then complete the following basic exercises on <code>comparators</code>.</
 <li>
 <p>Write a comparator to compare strings <strong>ignoring their first
 character</strong>. You can use the inbuilt <code>s1.compareTo(s2)</code> in the body of
-the compare method.</p>
+the compare method. Note that you will need to <code>import java.util.*;</code> or similar.</p>
 </li>
 <li>
 <p>In the <code>main</code> method, use your comparator and Java&#8217;s
 <code>Collections.sort</code> method to sort a list of strings:
-<code>["first","second","third","firtree"]</code>.</p>
+<code>["first","second","third","firtree"]</code>. Use any implementation of
+lists you are comfortable with (e.g. <code>ArrayList</code>). To construct a list, see <a href="https://stackoverflow.com/questions/157944/create-arraylist-from-array" class="bare">https://stackoverflow.com/questions/157944/create-arraylist-from-array</a></p>
 </li>
 <li>
 <p>Write a comparator to compare names (represented as a string "first
@@ -491,9 +492,12 @@ so that it works with lists of arbitrary objects.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>First, change all occurrences of <code>List&lt;Integer</code>&gt; in class
+<p>Change the <code>MergeSort</code> so that it is a generic <code>MergeSort&lt;T&gt;</code> class.</p>
+</li>
+<li>
+<p>Change all occurrences of <code>List&lt;Integer</code>&gt; in class
 <code>MergeSort</code> to be "generic" (i.e., <code>List&lt;T&gt;</code> rather than
-<code>List&lt;Integer&gt;</code>).</p>
+<code>List&lt;Integer&gt;</code>; you may need to comment out the <code>main()</code> method and the <code>static main</code> method). At this point you should be able to compile the code (ask a TA if this isn&#8217;t working for you).</p>
 </li>
 <li>
 <p>Now consider the <code>merge</code> method. Change the <code>merge</code> function so that
@@ -522,10 +526,10 @@ parameter <code>c</code> (with the same type as above).</p>
 </li>
 <li>
 <p>Alter the <code>mergesort</code> method to pass the comparator <code>c</code> to the
-<code>merge</code> function.</p>
+<code>merge</code> function (and also to any recursive calls to <code>mergesort</code>!)</p>
 </li>
 <li>
-<p>Finally, in the <code>main</code> method, implement a comparator to sort
+<p>Finally, in a <code>static void main</code> method, implement a comparator to sort
 strings in reverse dictionary order. Use this comparator and the
 <code>mergesort</code> function to sort the list <code>["charlie", "alf", "bert"]</code>.</p>
 </li>
