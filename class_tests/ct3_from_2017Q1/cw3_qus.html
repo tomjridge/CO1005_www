@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 1</p>
+<p>Suppose that an intermixed sequence of push and pop operations are performed. The pushes push the integers 0 through 9 in order; the pops print out the return value. Which of the following sequences could not occur? (You may tick more than one box if multiple sequences could not occur. You need to tick exactly the right box (or boxes) to get 1 mark. If you miss a box, or tick a box incorrectly, you get no mark.)</p>
+<p><span><big><big>□</big></big></span> 4 3 2 1 0 9 8 7 6 5</p>
+<p><span><big><big>□</big></big></span> 2 5 6 7 4 8 9 3 1 0</p>
+<p><span><big><big>□</big></big></span> 4 6 8 7 5 3 2 9 0 1</p>
+<p><span><big><big>□</big></big></span> 4 3 2 1 0 5 6 7 8 9</p>
+<p><span><big><big>□</big></big></span> 1 2 3 5 0 6 7 8 9 4</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 2</p>
+<p>Look at the following code:</p>
+<pre><code>  List v(MyNode t, int k) {
+    List this_node;
+    if(((Integer)t.obj) &gt; k) this_node=cons(t.obj,nil());
+    else this_node=nil();
+    if(isLeaf(t)) {
+      return this_node;
+    }
+    List left_nodes = v(t.left,k);
+    List right_nodes = v(t.right,k);
+    return append(left_nodes,append(this_node,right_nodes));
+  }</code></pre>
+<p>Suppose <code>t</code> is the tree corresponding to the expression <code>node(node(leaf(1),2,leaf(3)),4,leaf(5))</code>. What is the result of calling <code>v(t,2)</code>?</p>
+<p><span><big><big>□</big></big></span> [2,3,4,5]</p>
+<p><span><big><big>□</big></big></span> [2,4,3,5]</p>
+<p><span><big><big>□</big></big></span> [3,4,5]</p>
+<p><span><big><big>□</big></big></span> [4,3,5]</p>
+<p><span><big><big>□</big></big></span> [4,5]</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 3</p>
+<p>Look at the following code:</p>
+<pre><code>  boolean contains(Object obj, List l) {
+    while(true) {
+      if(l.isEmpty()) return false;
+      if(obj.equals(hd(l))) return true;
+      l=tl(l);
+    }
+  }
+  
+  List z(List l) {
+    List to_return = nil();
+    while(true) {
+      if(l.isEmpty()) return to_return;
+      if(!contains(hd(l),to_return)) { to_return = append1(to_return,hd(l)); }
+      l=tl(l);
+    }
+  }</code></pre>
+<p>What is the result of calling <code>z([4,3,2,1,6,5,4,3,7])</code>?</p>
+<p><span><big><big>□</big></big></span> <code>[4,3,2,1,6,5,4,3,7]</code></p>
+<p><span><big><big>□</big></big></span> <code>[4,3,2,1,6,5,4,7]</code></p>
+<p><span><big><big>□</big></big></span> <code>[4,3,2,1,6,5]</code></p>
+<p><span><big><big>□</big></big></span> <code>[4,3,2,1,6,5,7]</code></p>
+<p><span><big><big>□</big></big></span> <code>[2,1,6,5,4,3,7]</code></p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 4</p>
+<p>What is the result of attempting to compile the following code?</p>
+<pre><code>  class A {
+    private int s() { return 2; }
+  }
+
+  class B extends A {
+    int t() { return s(); }
+  }</code></pre>
+<p><span><big><big>□</big></big></span> the code fails to compile because <code>t()</code> should be declared to throw an <code>Exception</code></p>
+<p><span><big><big>□</big></big></span> the code fails to compile because class <code>B</code> does not extend <code>A</code></p>
+<p><span><big><big>□</big></big></span> the code fails to compile because class <code>A</code> is abstract</p>
+<p><span><big><big>□</big></big></span> the code fails to compile because <code>s()</code> is declared private, and so not accessible from class <code>B</code></p>
+<p><span><big><big>□</big></big></span> the code compiles fine</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 5</p>
+<p>Look at the following code:</p>
+<pre><code>  List c(MyNode t) {
+    if(isLeaf(t)) { return cons(t.obj,nil()); }
+    else {
+      return cons(t.obj,c(t.left));
+    }
+  }
+
+  List d() {
+    MyNode t = node(
+                    node(
+                         leaf(1),
+                         2,
+                         leaf(3)),
+                    4,
+                    leaf(5));
+    return c(t);
+  }</code></pre>
+<p>What is the result of calling <code>d()</code> ?</p>
+<p><span><big><big>□</big></big></span> [1,2,3,4,5]</p>
+<p><span><big><big>□</big></big></span> [4,5]</p>
+<p><span><big><big>□</big></big></span> [4,2,1]</p>
+<p><span><big><big>□</big></big></span> [1,2,4]</p>
+<p><span><big><big>□</big></big></span> [1,2,3]</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 6</p>
+<p>Look at the following code: What is the result of calling <code>p()</code>?</p>
+<pre><code>  List c(MyNode t) {
+    if(isLeaf(t)) { return cons(t.obj,nil()); }
+    else {
+      return cons(t.obj,c(t.left));
+    }
+  }
+
+  List d() {
+    MyNode t = node(
+                    node(
+                         leaf(1),
+                         2,
+                         leaf(3)),
+                    4,
+                    leaf(5));
+    return c(t);
+  }</code></pre>
+<p><span><big><big>□</big></big></span> hello</p>
+<p><span><big><big>□</big></big></span> llo</p>
+<p><span><big><big>□</big></big></span> llohe</p>
+<p><span><big><big>□</big></big></span> lloel</p>
+<p><span><big><big>□</big></big></span> none of the above</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 7</p>
+<p>Look at the following code: What is the result of calling <code>r(3)</code>?</p>
+<pre><code>  int r(int j) {
+    HashMap m = new HashMap();
+    int[] arr = {1,5,2,4,3,8,9,11};
+    for(int i=0; i&lt;arr.length-1; i++) { m.put(arr[i],arr[i+1]); }
+    return (Integer)(m.get(j));
+  }</code></pre>
+<p><span><big><big>□</big></big></span> 2</p>
+<p><span><big><big>□</big></big></span> 4</p>
+<p><span><big><big>□</big></big></span> 3</p>
+<p><span><big><big>□</big></big></span> 8</p>
+<p><span><big><big>□</big></big></span> 11</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 8</p>
+<p>Look at the following code:</p>
+<pre><code>  MyNode a(int h) {
+    if(h==0) { return leaf(h); }
+    return node(a(h-1),h,a(h-1));
+  }
+
+  int tree_size(MyNode t) {
+    if(isLeaf(t)) { return 1; }
+    else {
+      return tree_size(t.left)+1+tree_size(t.right);
+    }
+  }
+
+  int b() { return tree_size(a(4)); }</code></pre>
+<p>What is the result of calling <code>b()</code>?</p>
+<p><span><big><big>□</big></big></span> 0</p>
+<p><span><big><big>□</big></big></span> 31</p>
+<p><span><big><big>□</big></big></span> 7</p>
+<p><span><big><big>□</big></big></span> 15</p>
+<p><span><big><big>□</big></big></span> something else</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 9</p>
+<p>Look at the following code:</p>
+<pre><code>  int h() {
+    HashSet s = new HashSet();
+    s.remove(2);
+    s.add(3);
+    s.add(4);
+    s.add(5);
+    s.add(4);
+    return s.size();
+  }</code></pre>
+<p>What is the result of calling the method <code>h()</code>?</p>
+<p><span><big><big>□</big></big></span> 1</p>
+<p><span><big><big>□</big></big></span> 2</p>
+<p><span><big><big>□</big></big></span> 3</p>
+<p><span><big><big>□</big></big></span> 4</p>
+<p><span><big><big>□</big></big></span> 5</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 10</p>
+<p>Suppose <code>t</code> is the tree corresponding to the expression <code>node(node(leaf(1),2,leaf(3)),4,leaf(5))</code>. Which of the following is the pre-order traversal of the tree?</p>
+<p><span><big><big>□</big></big></span> 1,3,2,5,4</p>
+<p><span><big><big>□</big></big></span> 1,2,3,4,5</p>
+<p><span><big><big>□</big></big></span> 5,4,3,2,1</p>
+<p><span><big><big>□</big></big></span> 4,2,1,3,5</p>
+<p><span><big><big>□</big></big></span> 4,2,3,1,5</p>
+</div>
+</body>
+</html>
