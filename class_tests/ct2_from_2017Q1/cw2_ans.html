@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 1</p>
+<p>Which of the following is the correct way for a class <code>Manager</code> to implement an interface <code>Salary</code>?</p>
+<p><span><big><big>□</big></big></span> <code>class Manager extends Salary</code></p>
+<p><span><big><big>□</big></big></span> <code>class Manager with Salary</code></p>
+<p><span><big>X</big></span> <code>class Manager implements Salary</code></p>
+<p><span><big><big>□</big></big></span> <code>class Manager imports Salary</code></p>
+<p><span><big><big>□</big></big></span> something else</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 2</p>
+<p>Recall from lectures: The function <code>length</code> returns the length of a list. The function <code>take(n,l)</code> returns the first <code>n</code> elements of the list <code>l</code>. The function <code>drop(n,l)</code> drops the first <code>n</code> elements. Look at the following code, which is similar to the <code>mergesort</code> code we have covered in lectures:</p>
+<pre><code>  List f(List l) {
+    if(length(l) == 0) return cons(0,nil());
+    if(length(l) == 1) return cons(-1,l);
+    List l1 = take(length(l)/2,l);
+    List l2 = drop(length(l)/2,l);
+    l1 = f(l1);
+    l2 = f(l2);
+    return append(l1,l2);
+  }</code></pre>
+<p>What is the result of calling <code>f([5,4,3,2,1])</code>?</p>
+<p><span><big><big>□</big></big></span> [1,2,3,4,5]</p>
+<p><span><big><big>□</big></big></span> [0,5,-1,4,-1,3,-1,2,-1,1]</p>
+<p><span><big><big>□</big></big></span> [5,4,3,2,1]</p>
+<p><span><big>X</big></span> [-1,5,-1,4,-1,3,-1,2,-1,1]</p>
+<p><span><big><big>□</big></big></span> [0,5,0,4,0,3,0,2,-1,1]</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 3</p>
+<p>Look at the following code:</p>
+<pre><code>  class C1 {
+    String f() { return &quot;hello&quot;; }
+  }
+  
+  class C2 extends C1 {
+    String f() { return &quot;world&quot;; }
+  }</code></pre>
+<p>Class <code>C2</code> redefines the method <code>f()</code> originating from <code>C1</code>. This is an example of (select the most appropriate option):</p>
+<p><span><big><big>□</big></big></span> Method overloading</p>
+<p><span><big>X</big></span> Method overriding</p>
+<p><span><big><big>□</big></big></span> Constructor overloading</p>
+<p><span><big><big>□</big></big></span> Inheritance</p>
+<span><big><big>□</big></big></span> None of the above
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 4</p>
+<p>Look at the following code:</p>
+<pre><code>  class A {
+    String a1() { return &quot;1&quot;; }
+    String a2() { return &quot;2&quot;+a1(); }
+  }
+  
+  class B extends A {
+    String b1() { return &quot;3&quot;+a2(); }
+  }
+  
+  class D extends B {
+    String a1() { return &quot;4&quot;; }
+    String d1() { return &quot;5&quot;+b1(); }
+  }</code></pre>
+<p>What is the result of executing <code>(new D()).d1()</code> ?</p>
+<p><span><big><big>□</big></big></span> 5321</p>
+<p><span><big><big>□</big></big></span> 5</p>
+<p><span><big><big>□</big></big></span> 54321</p>
+<p><span><big><big>□</big></big></span> an exception is thrown</p>
+<p><span><big>X</big></span> 5324</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 5</p>
+<p>Look at the following code:</p>
+<pre><code>  int g(int i) {
+    if (i==0) return 1; 
+    return 2*h(i-1);
+  }
+
+  int h(int i) {
+    if (i==0) return 1; 
+    return -i*g(i-1);
+  }</code></pre>
+<p>What is the result of executing <code>g(5)</code> ?</p>
+<p><span><big><big>□</big></big></span> 32</p>
+<p><span><big><big>□</big></big></span> -32</p>
+<p><span><big><big>□</big></big></span> -64</p>
+<p><span><big>X</big></span> 64</p>
+<p><span><big><big>□</big></big></span> something else</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 6</p>
+<p>Look at the following code:</p>
+<pre><code>  int q(int n) {
+    if(n==0) return 1;
+    if(n==1) return 2;
+    if(n==2) return 3;
+    if(n==3) return 4;
+    return q(n-1)+q(n-2)+q(n-3)+q(n-4);
+  }</code></pre>
+<p>What is the result of calling <code>q(6)</code>?</p>
+<p><span><big><big>□</big></big></span> a number in the range 0 to 19</p>
+<p><span><big><big>□</big></big></span> a number in the range 20 to 29</p>
+<p><span><big><big>□</big></big></span> a number in the range 30 to 35</p>
+<p><span><big>X</big></span> a number in the range 36 to 40</p>
+<p><span><big><big>□</big></big></span> something else</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 7</p>
+<p>Note that characters in Java are ordered (so 'a' is less than 'b' etc).</p>
+<p>Look at the following code:</p>
+<pre><code>List u(List l) {
+  String s = &quot;quickbrownfox&quot;;
+  Comparator d = new Comparator() {
+      public int compare(Object o1, Object o2) {
+        int i1 = (Integer)o1;
+        int i2 = (Integer)o2;
+        if (s.charAt(i1) &lt; s.charAt(i2)) return -1;
+        else return 1;
+      }
+    };
+  Collections.sort(l,d);
+  return l;
+}</code></pre>
+<p>What is the result of calling <code>u([1,2,5,3,4,8])</code> ?</p>
+<p><span><big><big>□</big></big></span> [5,3,2,4,8,1]</p>
+<p><span><big><big>□</big></big></span> [5,2,3,4,1,8]</p>
+<p><span><big><big>□</big></big></span> [5,2,3,1,8,4]</p>
+<p><span><big>X</big></span> [5,3,2,4,1,8]</p>
+<p><span><big><big>□</big></big></span> something else</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 8</p>
+<p>Look at the following code:</p>
+<pre><code>  List s(List l) {
+    Comparator c = new Comparator() {
+        public int compare(Object o1, Object o2) {
+          String s1 = (String)o1;
+          String s2 = (String)o2;
+          if (s1.length() &gt; 1 &amp;&amp; s1.charAt(1) == &#39;i&#39;)
+            return -1;
+          else 
+            return (s1.length() - s2.length());
+        }
+      };
+    Collections.sort(l,c);
+    return l;
+  }</code></pre>
+<p>What is the first element in the list returned from <code>s([&quot;d&quot;,&quot;comes&quot;,&quot;before&quot;,&quot;eeee&quot;,&quot;in&quot;,&quot;the&quot;,&quot;mid&quot;])</code> ?</p>
+<p><span><big><big>□</big></big></span> d</p>
+<p><span><big><big>□</big></big></span> before</p>
+<p><span><big><big>□</big></big></span> in</p>
+<p><span><big>X</big></span> mid</p>
+<p><span><big><big>□</big></big></span> something else</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 9</p>
+<p>Look at the following code:</p>
+<pre><code>  int counter=0;
+  List&lt;Integer&gt; mergesort(List&lt;Integer&gt; l) {
+    counter=counter+1;
+    if(length(l) == 0 || length(l)==1) return l; // already sorted
+    List&lt;Integer&gt; l1 = take(length(l)/2,l); // first half
+    List&lt;Integer&gt; l2 = drop(length(l)/2,l); // second half
+    l1 = mergesort(l1);  // sort l1
+    l2 = mergesort(l2);  // sort l2
+    return merge(l1,l2);  // merge l1 and l2
+  }</code></pre>
+<p>Note that <code>counter</code> is initially 0. What is the value of <code>counter</code> after calling <code>mergesort([7,8,5,6,1])</code> ?</p>
+<p><span><big><big>□</big></big></span> a number &lt;= 6</p>
+<p><span><big><big>□</big></big></span> 7</p>
+<p><span><big><big>□</big></big></span> 8</p>
+<p><span><big>X</big></span> 9</p>
+<p><span><big><big>□</big></big></span> a number &gt;= 10</p>
+</div>
+<div style="page-break-inside: avoid">
+<hr />
+<p>Question 10</p>
+<p>Look at the following code:</p>
+<pre><code>  Integer[] w(Integer[] a,int k) {
+    for(int j=0; j &lt; k; j++) {
+      for(int i = 0; i &lt; a.length -1; i++) {
+        if(a[i] &gt; a[i+1]) {
+          // swap these entries
+          int tmp = a[i];
+          a[i] = a[i+1];
+          a[i+1] = tmp;
+        }
+      }
+    }
+    return a;
+  }</code></pre>
+<p>In this question, the expression <code>[1,4,5]</code> denotes the <em>array</em> of length 3 containing the integers 1,4 and 5 (in that order).</p>
+<p>Suppose <code>arr</code> is the array <code>[9,7,5,6,8,1,2,3]</code>. What is the result of calling <code>w(arr,3)</code>?</p>
+<p><span><big>X</big></span> [5, 6, 1, 2, 3, 7, 8, 9]</p>
+<p><span><big><big>□</big></big></span> [7, 5, 6, 1, 2, 3, 8, 9]</p>
+<p><span><big><big>□</big></big></span> [5, 6, 7, 1, 2, 3, 8, 9]</p>
+<p><span><big>X</big></span> [5, 6, 1, 2, 3, 7, 8, 9]</p>
+<p><span><big><big>□</big></big></span> something else</p>
+</div>
+</body>
+</html>
